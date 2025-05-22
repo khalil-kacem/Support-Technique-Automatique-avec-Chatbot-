@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';
 
-final apiKey = "AIzaSyDuyrba8Qjj4CME8BR6JiLL9vlWkkfedFs";
+final apiKey = "";
 
 class ChatMessage {
   final String text;
@@ -31,7 +31,7 @@ class _ChatAppState extends State<ChatApp> {
 
     final response = await http.post(
       Uri.parse(
-          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCr_x-weCOj02ZNCTbtFuvnujRz6acy918'),
+          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${your_key}'),
       headers: {
         'Content-Type': 'application/json',
       },
